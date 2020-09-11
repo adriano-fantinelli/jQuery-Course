@@ -1,0 +1,50 @@
+<html>
+
+    <head>
+
+        <title>click_hover</title>
+
+        <script type="text/javascript" src="../jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../css/click_hover.css">
+
+    </head>
+
+    <body>
+
+        <div id="circle"></div>
+
+        <iframe src="http://www.codestars.com"></iframe>
+
+        <p>This is some text.</p>
+
+        <div class="square"></div>
+
+        <div class="square"></div>
+
+        <script type="text/javascript">
+
+            $("#circle").click(function(){
+ 
+                alert("Hello")
+
+            });
+
+            $('#circle').hover(function(){
+               
+                alert($("p").html())
+
+            })
+
+            $(".square").click(function(){
+
+                alert("square was clicked!")
+
+            });
+
+            
+        </script>
+
+    </body>
+
+</html>

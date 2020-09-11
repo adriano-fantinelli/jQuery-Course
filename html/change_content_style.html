@@ -1,0 +1,62 @@
+<html>
+
+    <head>
+
+        <title>Change content and style</title>
+
+        <script type="text/javascript" src="../jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../css/change_content_style.css">
+
+    </head>
+
+    <body>
+
+        <div id="circle"></div>
+
+        <div class="square"></div>
+        
+        <div class="square"></div>
+
+        <iframe src="http://www.codestars.com"></iframe>
+
+        <p>This is some text.</p>
+
+        <script type="text/javascript">
+
+            $("#circle").click(function(){
+
+                $("p").html("This text has changed!")
+ 
+                $("#circle").css("background-color", "red")
+                
+            });
+
+            alert($("body").css("width"));
+
+            $('#circle').hover(function(){
+               
+                $("iframe").attr("src", "https://www.codestars.com/about/")
+
+            });
+
+            $('div').click(function(){
+
+                $(this).css("display", "none")                
+
+                if($(this).attr("id") == "circle") {
+
+                    alert("You clicked on a circle");
+
+                } else {
+                
+                    alert("You clicked on a square")
+
+                }
+            })
+            
+        </script>
+
+    </body>
+
+</html>

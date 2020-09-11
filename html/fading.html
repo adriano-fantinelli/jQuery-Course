@@ -1,0 +1,75 @@
+<html>
+
+    <head>
+
+        <title>Change content and style</title>
+
+        <script type="text/javascript" src="../jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../css/fading.css">
+
+    </head>
+
+    <body>
+
+        <p id="text">This is some text.</p>
+
+        <button id="fadeOut">Fade Out Text</button>
+
+        <p id="hiddenText">It was hidden.</p>
+
+        <button id="fadeIn">Fade In Text</button>
+
+        <p id="toggleText">This is a Toggle Text</p>
+
+        <button id="toggle">Toggle text changer</button>
+
+        <script type="text/javascript">
+
+            var textShowing = true;
+
+            $("#fadeOut").click(function() {
+
+                //$(this).hide();  
+                
+                $("p").fadeOut("slow");
+
+            })
+
+            $("#fadeIn").click(function() {
+
+                $("#hiddenText").fadeIn();
+
+            })
+
+            var textShowing = true;
+            
+            $("#toggle").click(function() {
+                
+                if (textShowing) {
+                    
+                    $("#toggleText").fadeOut(function() {
+                        
+                        textShowing = false;
+                        
+                    });
+                    
+                } else {
+                
+                    $("#toggleText").fadeIn(function() {
+                        
+                        textShowing = true;
+                        
+                    });
+                    
+                }
+                
+            });
+            
+
+            
+        </script>
+
+    </body>
+
+</html>
