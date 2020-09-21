@@ -1,0 +1,38 @@
+<html>
+
+    <head>
+
+        <title>Change content and style</title>
+
+        <script type="text/javascript" src="../jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../css/animation_content.css">
+
+    </head>
+
+    <body>
+
+        <div id="circle"></div>
+
+        <script type="text/javascript">
+
+            $("#circle").click(function () {
+
+                $(this).animate({
+                    width:"400px", 
+                    height:"400px",
+                    marginLeft:"100px",
+                    marginTop:"100px",
+                }, 2000, function(){
+
+                    $(this).css("background-color", "red");
+                    $(this).css("display", "none");
+
+                });
+            })
+            
+        </script>
+
+    </body>
+
+</html>
